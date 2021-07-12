@@ -1,6 +1,6 @@
 # DQN
 
-DQN - Deep Q learning with experience replay
+DQN - Deep Q learning with experience replay, target networks.
 
 References
 1) Playing Atari with Deep Reinforcement Learning [link](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf)

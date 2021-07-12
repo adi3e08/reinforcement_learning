@@ -1,6 +1,6 @@
 # Advantage Actor Critic
 
-Advantage Actor Critic Algorithm. It is the single thread version of A2C algorithm.
+Single thread version of Asynchronous Advantage Actor Critic Algorithm (A3C).
 
 References
 1) Asynchronous Methods for Deep Reinforcement Learning [link](https://arxiv.org/abs/1602.01783)
