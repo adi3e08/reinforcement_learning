@@ -71,18 +71,17 @@ class Worker(mp.Process):
                 ep_r += r
                 R.append(r)
                 o = o_1
-                if (t % self.arglist.update_every == 0 or done):  # update global and assign to local net
-                    # sync
+                if (t % self.arglist.update_every == 0 or done):
                     mb = deepcopy(self.global_mb.value)
                     if done:
-                        v_s_ = 0.0               # terminal
+                        v_s_ = 0.0 # terminal
                     else:
                         with torch.set_grad_enabled(False): 
                             _, next_values = self.model(torch.tensor(o_1, dtype=torch.float, device=self.device).unsqueeze(0))
                         v_s_ = next_values[0].item()
 
                     v_targets = []
-                    for r in R[::-1]:    # reverse buffer r
+                    for r in R[::-1]: # reverse R
                         v_s_ = r + self.arglist.gamma * v_s_
                         v_targets.append(v_s_)
                     v_targets.reverse()
@@ -97,7 +96,7 @@ class Worker(mp.Process):
                     gradients = [param.grad.clone() for param in self.model.parameters()]
                     rollouts = [self.name, mb, gradients]
                     self.rollouts_queue.put(rollouts)
-                    # print("W",self.name,"episode",l_ep,"sent MB ",mb)
+                    # print("Worker",self.name,"local episode",l_ep,"sent mini-batch ",mb)
 
                     new_batch = True
                     while True :
@@ -158,8 +157,6 @@ class A2C():
         for wk in range(self.worker_processes):
             self.msg_queue[wk] = 1
         
-        global_path = os.path.join(self.model_dir, "net_ckpt_latest")
-
         optimizer_worker = mp.Process(target=self.update_shared_model, args=(rollouts_queue,))
         plot_ep_r_worker = mp.Process(target=self.plot_ep_r, args=(ep_r_queue,))
         optimizer_worker.start()
@@ -175,12 +172,12 @@ class A2C():
             worker.join()
         print("Done workers")
         optimizer_worker.join()
-        print("Done opts")
+        print("Done optimizer")
         plot_ep_r_worker.join()
-        print("Done plots")
+        print("Done plotting")
 
     def update_shared_model(self, rollouts_queue):
-        """Worker that updates the shared model as rollouts get put into the queue"""
+        """Updates shared model as rollouts get put into the queue"""
         new_batch = True
         froms = [0 for i in range(self.worker_processes)]
         while True:
@@ -196,7 +193,7 @@ class A2C():
                     else :
                         new_gradients = rollouts[2]
                         gradients = [grad + new_grad for grad, new_grad in zip(gradients, new_gradients)]                    
-                    # print("\n Got from ",name , " mini-batch id ", mb_id)
+                    # print("\n Got from worker", name, " mini-batch id ", mb_id)
                     if sum(self.msg_queue) == sum(froms):
                         self.optimizer.zero_grad() 
                         N_trajs = sum(froms)
@@ -205,7 +202,7 @@ class A2C():
                         # torch.nn.utils.clip_grad_norm_(self.model.parameters(), self.arglist.clip_term)
                         self.optimizer.step()
                         with self.mp_lock:
-                            # print("Got MB ",self.mb.value, self.episode.value)
+                            # print("Got mini-batch ",self.mb.value, self.episode.value)
                             self.mb.value += 1
                         froms = [0 for i in range(self.worker_processes)]
                         new_batch = True
@@ -213,7 +210,6 @@ class A2C():
 
             if sum(self.msg_queue) == 0:
                 break
-        # print("Done from update_shared_model")
 
     def eval(self, episodes):
         ep_r_list = []
@@ -235,7 +231,6 @@ class A2C():
         return ep_r_list  
 
     def plot_ep_r(self,ep_r_queue):
-        # global writer_reward
         writer = SummaryWriter(log_dir=self.tensorboard_dir)
         while True:            
             if ep_r_queue.qsize() > 0:
@@ -253,7 +248,6 @@ class A2C():
             if sum(self.msg_queue) == 0:
                 break
         writer.close()
-        # print("Done from plot_ep_r")
 
 def parse_args():
     parser = argparse.ArgumentParser("A2C")

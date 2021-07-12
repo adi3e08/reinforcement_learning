@@ -81,14 +81,14 @@ class advantage_actor_critic:
                 o = o_1
                 if (t % self.arglist.update_every == 0 or done):
                     if done:
-                        v_s_ = 0.0               # terminal
+                        v_s_ = 0.0 # terminal
                     else:
                         with torch.set_grad_enabled(False): 
                             _, next_values = self.model(torch.tensor(o_1, dtype=torch.float, device=self.device).unsqueeze(0))
                         v_s_ = next_values[0].item()
 
                     v_targets = []
-                    for r in R[::-1]:    # reverse buffer r
+                    for r in R[::-1]: # reverse R
                         v_s_ = r + self.arglist.gamma * v_s_
                         v_targets.append(v_s_)
                     v_targets.reverse()
