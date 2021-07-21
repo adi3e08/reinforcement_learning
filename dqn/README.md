@@ -29,8 +29,8 @@ DQN - Deep Q learning with experience replay, target networks.
 <img src="media/mountain_car_v0_trained.gif" width="50%" height="50%"/>
 </p>
 
-Plot meanings
-* ep_r : Episodic return (total reward collected during episode) vs Episode number during training.
-* eval_ep_r : Agent performance evaluated every 1000 episodes during training. Each time measure average episodic return over 100 episodes.
+Plot legend
+* ep_r : Episodic Return (total reward collected during episode) vs Episode Number, during training.
+* eval_ep_r : Agent performance evaluated every 1000 episodes, during training. Each time measure average episodic return over 100 episodes.
 
 
