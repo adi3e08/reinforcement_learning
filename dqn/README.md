@@ -10,27 +10,44 @@ DQN - Deep Q learning with experience replay, target networks.
 * [Cart Pole](https://gym.openai.com/envs/CartPole-v1/) - Move back and forth to balance a pole on a cart.
 
 <p align="center">
-<img src="media/cartpole_train.png" width="50%" height="50%"/>
+Episodic Return (total reward collected during episode) vs Episode
 </p>
 <p align="center">
-(a) Episodic Return (total reward collected during episode) vs Episode
+<img src="media/cartpole_train.png" width="50%" height="50%"/>
+</p>
+
+<p align="center">
+Evaluate agent performance every 1000 episodes. Each time calculate average episodic return over 100 episodes.
 </p>
 <p align="center"> 
 <img src="media/cartpole_eval.png" width="50%" height="50%"/>
 </p>
+
 <p align="center">
-(b) Evaluate agent performance every 1000 episodes. Each time calculate average episodic return over 100 episodes.
+Trained agent
 </p>
 <p align="center">
 <img src="media/cartpole_v1_trained.gif" width="50%" height="50%"/>
 </p>
 
 * [Mountain Car ](https://gym.openai.com/envs/MountainCar-v0/) - Move back and forth to build up enough momentum to drive up a mountain.
+
+<p align="center">
+Episodic Return (total reward collected during episode) vs Episode
+</p>
 <p align="center">
 <img src="media/mountaincar_train.png" width="50%" height="50%"/>
 </p>
+
+<p align="center">
+Evaluate agent performance every 1000 episodes. Each time calculate average episodic return over 100 episodes.
+</p>
 <p align="center">
 <img src="media/mountaincar_eval.png" width="50%" height="50%"/>
+</p>
+
+<p align="center">
+Trained agent
 </p>
 <p align="center">
 <img src="media/mountain_car_v0_trained.gif" width="50%" height="50%"/>
