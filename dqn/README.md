@@ -13,14 +13,14 @@ DQN - Deep Q learning with experience replay, target networks.
 Episodic Return (total reward collected during episode) vs Episode, during training.
 </p>
 <p align="center">
-<img src="media/cartpole_train.png" width="50%" height="50%"/>
+<img src="media/cartpole_train.png" width="75%" height="75%"/>
 </p>
 
 <p align="center">
 Evaluate agent performance every 1000 episodes. Each time calculate average episodic return over 100 episodes.
 </p>
 <p align="center"> 
-<img src="media/cartpole_eval.png" width="50%" height="50%"/>
+<img src="media/cartpole_eval.png" width="75%" height="75%"/>
 </p>
 
 <p align="center">
@@ -36,14 +36,14 @@ Trained agent
 Episodic Return (total reward collected during episode) vs Episode, during training.
 </p>
 <p align="center">
-<img src="media/mountaincar_train.png" width="50%" height="50%"/>
+<img src="media/mountaincar_train.png" width="75%" height="75%"/>
 </p>
 
 <p align="center">
 Evaluate agent performance every 1000 episodes. Each time calculate average episodic return over 100 episodes.
 </p>
 <p align="center">
-<img src="media/mountaincar_eval.png" width="50%" height="50%"/>
+<img src="media/mountaincar_eval.png" width="75%" height="75%"/>
 </p>
 
 <p align="center">
