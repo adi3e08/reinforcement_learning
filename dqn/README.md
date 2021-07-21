@@ -10,12 +10,12 @@ DQN - Deep Q learning with experience replay, target networks.
 * [Cart Pole](https://gym.openai.com/envs/CartPole-v1/) - Move back and forth to balance a pole on a cart.
 
 <p align="center">
-<img src="media/cartpole_train.png" width="50%" height="50%"/>
 Episodic Return (total reward collected during episode) vs Episode
+<img src="media/cartpole_train.png" width="50%" height="50%"/>
 </p>
 <p align="center">
-<img src="media/cartpole_eval.png" width="50%" height="50%"/>
 Evaluate agent performance every 1000 episodes. Each time calculate average episodic return over 100 episodes. 
+<img src="media/cartpole_eval.png" width="50%" height="50%"/>
 </p>
 <p align="center">
 <img src="media/cartpole_v1_trained.gif" width="50%" height="50%"/>
