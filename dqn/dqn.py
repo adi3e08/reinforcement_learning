@@ -78,12 +78,7 @@ class DQN:
         with torch.set_grad_enabled(False):
             a_best = self.Q(torch.tensor(o, dtype=torch.float, device=self.device).unsqueeze(0)).max(1)[1][0].item()
         a_rand = np.random.randint(0,self.env.action_size)
-        if epsilon == 0.0:
-            a = a_best
-        elif epsilon == 1.0:
-            a = a_rand
-        else :
-            a = np.random.choice(np.array([a_rand, a_best]), p = [epsilon, 1.0 - epsilon])
+        a = np.random.choice(np.array([a_rand, a_best]), p = [epsilon, 1.0 - epsilon])
         return a
 
     def train(self):
@@ -101,6 +96,7 @@ class DQN:
                 self.replay_buffer.push(o, a, r, o_1, int(done))
                 ep_r += r
                 o = o_1
+                epsilon = max(self.arglist.min_epsilon, epsilon-self.arglist.epsilon_decay)
                 if self.replay_buffer.__len__() < arglist.replay_fill:
                     pass
                 else :
@@ -156,6 +152,8 @@ def parse_args():
     parser.add_argument("--lr", type=float, default=2.5e-4, help="learning rate")
     parser.add_argument("--gamma", type=float, default=0.99, help="discount factor")
     parser.add_argument("--batch-size", type=int, default=32, help="batch size")
+    parser.add_argument("--min-epsilon", type=float, default=0.1, help="min epsilon")
+    parser.add_argument("--epsilon-decay", type=float, default=1e-5, help="reduce epsilon by _ every step")
     parser.add_argument("--update-every", type=int, default=4, help="train after every _ steps")
     parser.add_argument("--target-update-every", type=int, default=100, help="update target every _ updates")
     parser.add_argument("--replay-size", type=int, default=10000, help="replay buffer size")
@@ -178,4 +176,3 @@ if __name__ == '__main__':
     env = make_env()
     dqn = DQN(arglist, env)
     dqn.train()
-
