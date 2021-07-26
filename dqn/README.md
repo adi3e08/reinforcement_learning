@@ -30,7 +30,7 @@ Trained agent
 <img src="media/cartpole_v1_trained.gif" width="50%" height="50%"/>
 </p>
 
-* [Mountain Car ](https://gym.openai.com/envs/MountainCar-v0/) - Move back and forth to build up enough momentum to drive up a mountain.
+* [Mountain Car ](https://gym.openai.com/envs/MountainCar-v0/) - Move back and forth to build up enough momentum to drive up a big hill.
 
 <p align="center">
 Cumulative Reward vs Episode, during training.
