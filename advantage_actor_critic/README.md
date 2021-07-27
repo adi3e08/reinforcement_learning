@@ -1,11 +1,11 @@
 # Advantage Actor Critic
 
-Advantage Actor Critic algorithm - single thread version of A3C (Asynchronous Advantage Actor Critic) algorithm.
+Advantage Actor Critic algorithm - single threaded version of A3C (Asynchronous Advantage Actor Critic) algorithm.
 
 ## References
 * "Asynchronous Methods for Deep Reinforcement Learning", Mnih et al. [Link](https://arxiv.org/abs/1602.01783).
 
-## Results
+## Tested on
 * [Cart Pole](https://gym.openai.com/envs/CartPole-v1/) - Move back and forth to balance a pole on a cart.
 
 <p align="center">
