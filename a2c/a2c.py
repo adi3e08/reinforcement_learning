@@ -87,10 +87,11 @@ class Worker(mp.Process):
                     v_targets.reverse()
                     v_targets = torch.tensor(v_targets, dtype=torch.float, device=self.device)
                     td = v_targets - values
-                    a_loss = - (log_probs * td.detach() + 0.01 * entrops)                                 
-                    c_loss = td.pow(2)
+                    a_loss = - (log_probs * td.detach()).mean()
+                    e_loss = - entrops.mean()                                
+                    c_loss = td.pow(2).mean()
 
-                    loss = (a_loss + 0.5 * c_loss).sum()
+                    loss = (a_loss + 0.01 * e_loss + 0.5 * c_loss)
                     self.optimizer.zero_grad()
                     loss.backward()                
                     gradients = [param.grad.clone() for param in self.model.parameters()]
@@ -251,25 +252,25 @@ class A2C():
 
 def parse_args():
     parser = argparse.ArgumentParser("A2C")
-    parser.add_argument("--exp-name", type=str, default="expt_1", help="name of experiment")
+    parser.add_argument("--exp-name", type=str, default="expt_cartpole", help="name of experiment")
     parser.add_argument("--worker-processes", type=int, default=4, help="number of worker processes")
-    parser.add_argument("--episodes-per-worker", type=int, default=12000, help="number of episodes")
+    parser.add_argument("--episodes-per-worker", type=int, default=6250, help="number of episodes")
     # Core training parameters
     parser.add_argument("--lr", type=float, default=2.5e-4, help="learning rate")
     parser.add_argument("--gamma", type=float, default=0.99, help="discount factor")
     # parser.add_argument("--clip-term", type=float, default=0.5, help="gradient clipping parameter")
-    parser.add_argument("--update-every", type=int, default=4, help="train after every _ steps")
+    parser.add_argument("--update-every", type=int, default=5, help="train after every _ steps")
     parser.add_argument("--eval-every", type=int, default=1000, help="eval every _ episodes")
     parser.add_argument("--eval-over", type=int, default=100, help="eval over _ episodes")
     return parser.parse_args()
 
 def make_env():
-    # env = gym.make('CartPole-v1')
-    # env.state_size = 4
-    # env.action_size = 2
-    env = gym.make('MountainCar-v0')
-    env.state_size = 2
-    env.action_size = 3
+    env = gym.make('CartPole-v1')
+    env.state_size = 4
+    env.action_size = 2
+    # env = gym.make('MountainCar-v0')
+    # env.state_size = 2
+    # env.action_size = 3
     return env
 
 if __name__ == '__main__':
