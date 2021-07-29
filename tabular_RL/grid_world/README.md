@@ -1,6 +1,6 @@
 # Grid World
 
-Consider the classic problem of finding the shortest path between two cells on a grid filled with obstacles.
+Consider the classic problem of finding the shortest path between two locations on a grid filled with obstacles.
 
 ![Grid](https://adi3e08.github.io/files/blog/grid-world/imgs/grid.png)
 
@@ -15,7 +15,7 @@ Consider the classic problem of finding the shortest path between two cells on a
 4.  Number of Obstacles : N<sub>X</sub>
 
 5.  Obstacle locations :
-    X = { (h<sub>X</sub><sup>i</sup>, w<sub>X</sub><sup>i</sup>):  0 <= i <= N<sub>X</sub>-1 }
+    X = { (h<sub>X</sub><sup>i</sup>, w<sub>X</sub><sup>i</sup>) :  0 <= i <= N<sub>X</sub>-1 }
 
 6.  Allowed moves : King's moves
 
