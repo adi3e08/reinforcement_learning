@@ -1,2 +1,2 @@
 # reinforcement_learning
-Code for different reinforcement learning algorithms, written in Pytorch.
+This repository contains code for different reinforcement learning tasks and algorithms that I have experimented with.
