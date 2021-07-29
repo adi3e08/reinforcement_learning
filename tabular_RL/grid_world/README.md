@@ -1,3 +1,5 @@
+# Grid World
+
 Consider the classic problem of finding the shortest path between two cells on a grid filled with obstacles.
 
 ![Grid](https://adi3e08.github.io/files/blog/grid-world/imgs/grid.png)
