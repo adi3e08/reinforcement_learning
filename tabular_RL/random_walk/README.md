@@ -1,6 +1,6 @@
 # Random Walk
 
-Consider $N$ states laid out in a row, with the left most state being a terminal state. Consider an agent who, when at a non-terminal state, chooses to move with probability $p$ to the left neighbour and with probability $1-p$ to the right neighbour(or to itself in case of the right-most state). All rewards are 1.
+Consider N states laid out in a row, with the left most state being a terminal state. Consider an agent who, when at a non-terminal state, chooses to move with probability p to the left neighbour and with probability 1-p to the right neighbour(or to itself in case of the right-most state). All rewards are 1.
 
 ![MDP](https://adi3e08.github.io/files/blog/random-walk/imgs/mdp.png)
 

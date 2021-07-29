@@ -6,16 +6,16 @@ Consider the classic problem of finding the shortest path between two cells on a
 
 **Given**
 
-1.  Dimensions : Height $H$, Width $W$
+1.  Grid Dimensions : Height H, Width W
 
-2.  Start location : $(h_{S},w_{S})$
+2.  Start location : (h<sub>S</sub>, w<sub>S</sub>)
 
-3.  Goal location : $(h_{G},w_{G})$
+3.  Goal location : (h<sub>G</sub>, w<sub>G</sub>)
 
-4.  Number of Obstacles : $N_{X}$
+4.  Number of Obstacles : N<sub>X</sub>
 
-5.  Obstacles :
-    $\mathcal{X} = $ { $(h_{X}^{i},w_{X}^{i}):  0 \leq i \leq N_{obs}-1$ }
+5.  Obstacle locations :
+    X = { (h<sub>X</sub><sup>i</sup>, w<sub>X</sub><sup>i</sup>):  0 <= i <= N<sub>X</sub>-1 }
 
 6.  Allowed moves : King's moves
 
