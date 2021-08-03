@@ -21,3 +21,10 @@ Evaluate agent performance every 1000 episodes. Each time calculate average cumu
 <p align="center"> 
 <img src="media/cartpole_eval.png" width="75%" height="75%"/>
 </p>
+
+<p align="center">
+Trained agent
+</p>
+<p align="center">
+<img src="https://github.com/adi3e08/reinforcement_learning/tree/main/deep_RL/dqn/media/cartpole_v1_trained.gif" width="50%" height="50%"/>
+</p>
