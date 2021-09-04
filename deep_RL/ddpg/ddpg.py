@@ -172,7 +172,7 @@ class DDPG:
 def parse_args():
     parser = argparse.ArgumentParser("DQN")
     parser.add_argument("--exp-name", type=str, default="expt_pendulum", help="name of experiment")
-    parser.add_argument("--episodes", type=int, default=6000, help="number of episodes")
+    parser.add_argument("--episodes", type=int, default=10000, help="number of episodes")
     # Core training parameters
     parser.add_argument("--lr", type=float, default=2.5e-4, help="learning rate")
     parser.add_argument("--gamma", type=float, default=0.99, help="discount factor")
