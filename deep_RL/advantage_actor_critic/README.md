@@ -12,21 +12,21 @@ Advantage Actor Critic algorithm - single threaded version of A3C (Asynchronous 
 Cumulative Reward (total reward collected during episode) vs Episode, during training.
 </p>
 <p align="center">
-<img src="media/cartpole_train.png" width="75%" height="75%"/>
+<img src=".media/cartpole_train.png" width="75%" height="75%"/>
 </p>
 
 <p align="center">
 Evaluate agent performance every 1000 episodes. Each time calculate average cumulative reward over 100 episodes.
 </p>
 <p align="center"> 
-<img src="media/cartpole_eval.png" width="75%" height="75%"/>
+<img src=".media/cartpole_eval.png" width="75%" height="75%"/>
 </p>
 
 <p align="center">
 Trained agent
 </p>
 <p align="center">
-<img src="media/cartpole_v1_trained.gif" width="50%" height="50%"/>
+<img src=".media/cartpole_v1_trained.gif" width="50%" height="50%"/>
 </p>
 
 
