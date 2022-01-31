@@ -11,15 +11,9 @@ SAC - Soft Actor Critic algorithm.
 * Cartpole Swingup (Deepmind Control Suite) - Move back and forth to swing up and balance a pole on a cart.
 
 <p align="center">
-Agent Performance.
-</p>
-<p align="center">
-<img src="media/sac_cartpole_swingup.png" width="75%" height="75%"/>
+<img src="media/sac_cartpole_swingup.png" width="50%" height="50%"/>
 </p>
 
-<p align="center">
-Trained agent
-</p>
 <p align="center">
 <img src="media/sac_cartpole_swingup.gif" width="50%" height="50%"/>
 </p>
@@ -27,15 +21,9 @@ Trained agent
 * Reacher Hard (Deepmind Control Suite) - Control a two-link robotic arm to reach a randomized target location.
 
 <p align="center">
-Agent Performance.
-</p>
-<p align="center">
-<img src="media/sac_reacher_hard.png" width="75%" height="75%"/>
+<img src="media/sac_reacher_hard.png" width="50%" height="50%"/>
 </p>
 
-<p align="center">
-Trained agent
-</p>
 <p align="center">
 <img src="media/sac_reacher_hard.gif" width="50%" height="50%"/>
 </p>
@@ -44,15 +32,9 @@ Trained agent
 * [Bipedal Walker](https://gym.openai.com/envs/BipedalWalker-v2/) (OpenAI Gym) - Train a bipedal robot to walk.
 
 <p align="center">
-Agent Performance.
-</p>
-<p align="center">
-<img src="media/sac_bipedal_walker.png" width="75%" height="75%"/>
+<img src="media/sac_bipedal_walker.png" width="50%" height="50%"/>
 </p>
 
-<p align="center">
-Trained agent
-</p>
 <p align="center">
 <img src="media/sac_bipedal_walker.gif" width="50%" height="50%"/>
 </p>
