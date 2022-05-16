@@ -1,2 +1,2 @@
-# reinforcement_learning
-This repository contains code for different reinforcement learning tasks and algorithms that I experimented with.
+# tabular_RL
+Code for some tabular reinforcement learning problems that I experimented with.
