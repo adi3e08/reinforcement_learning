@@ -2,31 +2,38 @@
 
 Consider the classic problem of finding the shortest path between two locations on a grid filled with obstacles.
 
-![Grid](https://adi3e08.github.io/files/blog/grid-world/imgs/grid.png)
+<p align="center">
+<img src="https://adi3e08.github.io/files/blog/grid-world/imgs/grid.png" width="100%" height="100%"/>
+</p>
 
 **Given**
 
-1.  Grid Dimensions : Height H, Width W
+- Grid Dimensions : Height $H$, Width $W$
 
-2.  Start location : (h<sub>S</sub>, w<sub>S</sub>)
+- Start location : $(h_{S},w_{S})$
 
-3.  Goal location : (h<sub>G</sub>, w<sub>G</sub>)
+- Goal location : $(h_{G},w_{G})$
 
-4.  Number of Obstacles : N<sub>X</sub>
+- Obstacles : $\mathcal{X} = $ { $(h_{X}^{i},w_{X}^{i}):  1 \leq i \leq N_{X}$ }
 
-5.  Obstacle locations :
-    X = { (h<sub>X</sub><sup>i</sup>, w<sub>X</sub><sup>i</sup>) :  0 <= i <= N<sub>X</sub>-1 }
+- Allowed moves : King's moves
 
-6.  Allowed moves : King's moves
+We consider two variations of value iteration,
+<p align="center">
+<img src="https://adi3e08.github.io/files/blog/grid-world/imgs/value_iteration_sync.png" width="90%" height="90%"/>
+</p>
 
-We consider two variations of value iteration
+<p align="center">
+<img src="https://adi3e08.github.io/files/blog/grid-world/imgs/value_iteration_async.png" width="90%" height="90%"/>
+</p>
 
-![value_iteration_sync](https://adi3e08.github.io/files/blog/grid-world/imgs/value_iteration_sync.png)
+## Result
+<p align="center">
+<img src="https://adi3e08.github.io/files/blog/grid-world/imgs/result.png" width="75%" height="75%"/>
+</p>
 
-![value_iteration_async](https://adi3e08.github.io/files/blog/grid-world/imgs/value_iteration_async.png)
+<p align="center">
+<img src="https://adi3e08.github.io/files/blog/grid-world/imgs/best_path.png" width="100%" height="100%"/>
+</p>
 
-**Result**
-
-![result](https://adi3e08.github.io/files/blog/grid-world/imgs/result.png)
-
-![best_path](https://adi3e08.github.io/files/blog/grid-world/imgs/best_path.png)
+You can find the code used in these experiments [here](https://github.com/adi3e08/tabular_RL/tree/main/grid_world).
