@@ -14,7 +14,7 @@ Consider the classic problem of finding the shortest path between two locations 
 
 - Goal location : $(h_{G},w_{G})$
 
-- Obstacles : $\mathcal{X} = $ { $(h_{X}^{i},w_{X}^{i}):  1 \leq i \leq N_{X}$ }
+- Obstacles :  $\mathcal{X} = $ { $(h_{X}^{i},w_{X}^{i}):  1 \leq i \leq N_{X}$ }
 
 - Allowed moves : King's moves
 
