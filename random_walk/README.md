@@ -14,8 +14,8 @@ Consider the classic random walk problem. Let $N$ states laid out in a row, with
 
 $$
 \mathcal{A}(s) = \begin{cases} 
-\{-1,0\} \ if \ s = N \\
-\{-1,1\} \ if \ s \in S-\{N\}
+\\{-1,0\\} \text{    if    } s = N \\
+\\{-1,1\\} \text{    if    } s \in S-\{N\}
 \end{cases} \nonumber
 $$
 
@@ -33,8 +33,8 @@ $$
   For all $ s \in \mathcal{S}, \ a \in \mathcal{A}(s),s' \in \mathcal{S}^{+}$,
 
 $$
-\mathcal{P}(s,a,s')= \mathbb{P}[S_{t+1}=s'|S_{t}=s,A_{t}=a ] = \begin{cases} 1 \ if \ s'= s+a \\ 
-0 \ if \ s' \in S^{+}-\{s+a\} \end{cases} \nonumber
+\mathcal{P}(s,a,s')= \mathbb{P}[S_{t+1}=s'|S_{t}=s,A_{t}=a ] = \begin{cases} 1 \text{    if    } s'= s+a \\ 
+0 \text{    if    } s' \in S^{+}-\{s+a\} \end{cases} \nonumber
 $$
 
 ## Agent's Policy
@@ -43,16 +43,16 @@ For all $ s \in \mathcal{S}, \ a \in \mathcal{A}(s)$,
 $$
 \pi_{agent}(s,a) = \mathbb{P}[A_{t}=a |S_{t}=s] = 
 \begin{cases} 
-if \ s = N \
+\text{    if    } s = N \
 \begin{cases}
-p \ if \ a = -1 \\
-1-p \ if \ a = 0 
+p \text{    if    } a = -1 \\
+1-p \text{    if    } a = 0 
 \end{cases}
 \\
-if \ s \in \mathcal{S}-\{N\} \
+\text{    if    } s \in \mathcal{S}-\{N\} \
 \begin{cases}
-p \ if \ a = -1 \\
-1-p \ if \ a = 1 
+p \text{    if    } a = -1 \\
+1-p \text{    if    } a = 1 
 \end{cases}
  \end{cases} \nonumber
 $$
