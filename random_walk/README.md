@@ -64,27 +64,27 @@ since the State and Action Spaces are discrete and finite.
 
 ## Model Based Policy Evaluation
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/policy_eval_sync.png" width="65%" height="65%"/>
+<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/policy_eval_sync.png" width="60%" height="60%"/>
 </p>
 
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/policy_eval_async.png" width="65%" height="65%"/>
+<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/policy_eval_async.png" width="60%" height="60%"/>
 </p>
 
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/model_based_policy_eval.png" width="65%" height="65%"/>
+<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/model_based_policy_eval.png" width="60%" height="60%"/>
 </p>
 
 ## Model Free Policy Evaluation
 
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/td_lambda.png" width="65%" height="65%"/>
+<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/td_lambda.png" width="60%" height="60%"/>
 </p>
 
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/offline_lambda.png" width="65%" height="65%"/>
+<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/offline_lambda.png" width="60%" height="60%"/>
 </p>
 
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/model_free_policy_eval.png" width="65%" height="65%"/>
+<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/model_free_policy_eval.png" width="60%" height="60%"/>
 </p>
