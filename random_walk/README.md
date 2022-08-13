@@ -21,7 +21,7 @@ $$
 
 - **Reward Structure**
 
-  For all $s \in \mathcal{S}, \ a \in \mathcal{A}(s)$,
+  For all $s \in \mathcal{S}, \, a \in \mathcal{A}(s)$,
 
 $$
 \mathcal{R}(s,a) = \mathbb{E}[R_{t+1}|S_{t}=s,A_{t}=a ]= 
@@ -30,7 +30,7 @@ $$
 
 - **Transition Model**
 
-  For all $s \in \mathcal{S}, a \in \mathcal{A}(s),s' \in \mathcal{S}^{+}$,
+  For all $s \in \mathcal{S}, \, a \in \mathcal{A}(s),s' \in \mathcal{S}^{+}$,
 
 $$
 \mathcal{P}(s,a,s')= \mathbb{P}[S_{t+1}=s'|S_{t}=s,A_{t}=a ] = \begin{cases} 1  \text{ if } s'= s+a \\ 
@@ -38,7 +38,7 @@ $$
 $$
 
 ## Agent's Policy
-For all $s \in \mathcal{S}, a \in \mathcal{A}(s)$,
+For all $s \in \mathcal{S}, \, a \in \mathcal{A}(s)$,
 
 $$
 \pi_{agent}(s,a) = \mathbb{P}[A_{t}=a |S_{t}=s] = 
@@ -64,27 +64,27 @@ since the State and Action Spaces are discrete and finite.
 
 ## Model Based Policy Evaluation
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/policy_eval_sync.png" width="50%" height="50%"/>
+<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/policy_eval_sync.png" width="75%" height="75%"/>
 </p>
 
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/policy_eval_async.png" width="50%" height="50%"/>
+<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/policy_eval_async.png" width="75%" height="75%"/>
 </p>
 
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/model_based_policy_eval.png" width="50%" height="50%"/>
+<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/model_based_policy_eval.png" width="75%" height="75%"/>
 </p>
 
 ## Model Free Policy Evaluation
 
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/td_lambda.png" width="50%" height="50%"/>
+<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/td_lambda.png" width="75%" height="75%"/>
 </p>
 
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/offline_lambda.png" width="50%" height="50%"/>
+<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/offline_lambda.png" width="75%" height="75%"/>
 </p>
 
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/model_free_policy_eval.png" width="50%" height="50%"/>
+<img src="https://adi3e08.github.io/files/blog/random-walk/imgs/model_free_policy_eval.png" width="75%" height="75%"/>
 </p>
