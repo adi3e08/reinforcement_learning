@@ -35,5 +35,3 @@ We consider two variations of value iteration,
 <p align="center">
 <img src="https://adi3e08.github.io/files/blog/grid-world/imgs/best_path.png" width="100%" height="100%"/>
 </p>
-
-You can find the code used in these experiments [here](https://github.com/adi3e08/tabular_RL/tree/main/grid_world).
